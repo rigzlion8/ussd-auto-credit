@@ -88,9 +88,9 @@ export const SubscribeForm = ({
       {step === 'pin' && (
         <form onSubmit={handleSubmit} className="subscription-form">
           <div className="form-group">
-            <label>USSD PIN</label>
+            <label>USSD Shortcode</label>
             <input
-              type="password"
+              type="tel"
               value={pin}
               onChange={(e) => setPin(e.target.value)}
               maxLength={4}

@@ -4,21 +4,21 @@
       "id": 1,
       "phone": "254712345678",
       "name": "Jane Doe",
-      "ussd_pin": "1234",
+      "ussd_shortcode": "1234",
       "balance": 500
     },
     {
       "id": 2,
       "phone": "254722345678",
       "name": "Wambui Doe",
-      "ussd_pin": "1234",
+      "ussd_shortcode": "1234",
       "balance": 450000
     },
     {
       "id": 3,
       "phone": "254722345678",
       "name": "John Wick",
-      "ussd_pin": "0000",
+      "ussd_shortcode": "0000",
       "balance": 2350000
     }
   ],
@@ -48,18 +48,42 @@
       "is_active": true
     },
     {
-      "id": "063a",
-      "fan_phone": "254700000001",
+      "id": "4",
+      "fan_phone": "254700000004",
       "influencer_id": 1,
       "amount": 10,
       "frequency": "weekly",
+      "is_active": true
+    },
+    {
+      "id": "fbd7",
+      "fan_phone": "254710000001",
+      "influencer_id": 1,
+      "amount": 10,
+      "frequency": "weekly",
+      "is_active": true
+    },
+    {
+      "id": "79d2",
+      "fan_phone": "254710000001",
+      "influencer_id": 1,
+      "amount": 10,
+      "frequency": "weekly",
+      "is_active": true
+    },
+    {
+      "id": "3e32",
+      "fan_phone": "254710000001",
+      "influencer_id": 1,
+      "amount": 10,
+      "frequency": "monthly",
       "is_active": true
     }
   ],
   "users": [
     {
       "id": 1,
-      "phone": "254700000001",
+      "phone": "254710000001",
       "pin": "4321",
       "balance": 1000000
     }
