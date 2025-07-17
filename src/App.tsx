@@ -1,6 +1,5 @@
 import React from 'react';
 import { InfluencerList } from './components/InfluencerList';
-import { SubscribeForm } from './components/SubscribeForm';
 import './App.css';
 
 const App = () => {
@@ -9,7 +8,7 @@ const App = () => {
       <header className="App-header">
         <h1>USSD Auto-Credit Platform</h1>
       </header>
-      <main>
+      <main className="main-content">
         <InfluencerList />
       </main>
     </div>

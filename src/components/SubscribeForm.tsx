@@ -1,19 +1,26 @@
 import { useState } from 'react';
 import axios from 'axios';
+import './SubscribeForm.css'; // Create this file for component-specific styles
 
 interface SubscribeFormProps {
   influencerId: number;
   influencerName: string;
+  influencerPhone: string;
+  influencerBalance: number;
 }
 
-export const SubscribeForm = ({ influencerId, influencerName }: SubscribeFormProps) => {
+export const SubscribeForm = ({ 
+  influencerId, 
+  influencerName,
+  influencerPhone,
+  influencerBalance
+}: SubscribeFormProps) => {
   const [phone, setPhone] = useState('');
   const [pin, setPin] = useState('');
   const [amount, setAmount] = useState(10);
   const [frequency, setFrequency] = useState<'daily' | 'weekly' | 'monthly'>('weekly');
   const [step, setStep] = useState<'phone' | 'pin' | 'confirmation'>('phone');
 
-  // Verify PIN against mock API
   const verifyPin = async () => {
     try {
       const response = await axios.get(`http://localhost:3001/users?phone=${phone}&pin=${pin}`);
@@ -24,7 +31,6 @@ export const SubscribeForm = ({ influencerId, influencerName }: SubscribeFormPro
     }
   };
 
-  // Handle subscription
   const handleSubscribe = async () => {
     try {
       await axios.post('http://localhost:3001/subscribers', {
@@ -32,42 +38,41 @@ export const SubscribeForm = ({ influencerId, influencerName }: SubscribeFormPro
         influencer_id: influencerId,
         amount,
         frequency,
-        is_active: true,
-        created_at: new Date().toISOString()
+        is_active: true
       });
       setStep('confirmation');
     } catch (error) {
       console.error('Subscription failed:', error);
-      alert('Subscription failed! Check console for details.');
     }
   };
 
-  // USSD-like flow controller
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (step === 'phone') {
       setStep('pin');
-    } 
-    else if (step === 'pin') {
+    } else if (step === 'pin') {
       const isValid = await verifyPin();
       if (isValid) {
         await handleSubscribe();
       } else {
-        alert('Invalid PIN! Please try again.');
+        alert('Invalid PIN!');
         setPin('');
       }
     }
   };
 
   return (
-    <div className="ussd-form">
-      <h3>Subscribe to {influencerName}</h3>
-      
-      <form onSubmit={handleSubmit}>
-        {step === 'phone' && (
+    <div className="influencer-card">
+      <div className="influencer-info">
+        <h3>{influencerName}</h3>
+        <p>Phone: {influencerPhone}</p>
+        <p>Balance: KSh {influencerBalance}</p>
+      </div>
+
+      {step === 'phone' && (
+        <form onSubmit={handleSubmit} className="subscription-form">
           <div className="form-group">
-            <label>Your Phone Number (254...)</label>
+            <label>Your Phone (254...)</label>
             <input
               type="tel"
               value={phone}
@@ -76,56 +81,53 @@ export const SubscribeForm = ({ influencerId, influencerName }: SubscribeFormPro
               required
             />
           </div>
-        )}
+          <button type="submit">Continue</button>
+        </form>
+      )}
 
-        {step === 'pin' && (
-          <>
-            <div className="form-group">
-              <label>Enter USSD PIN</label>
-              <input
-                type="password"
-                value={pin}
-                onChange={(e) => setPin(e.target.value)}
-                maxLength={4}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label>Amount (KSh)</label>
-              <input
-                type="number"
-                value={amount}
-                onChange={(e) => setAmount(Number(e.target.value))}
-                min="10"
-                max="1000"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label>Frequency</label>
-              <select 
-                value={frequency} 
-                onChange={(e) => setFrequency(e.target.value as 'daily' | 'weekly' | 'monthly')}
-              >
-                <option value="daily">Daily</option>
-                <option value="weekly">Weekly</option>
-                <option value="monthly">Monthly</option>
-              </select>
-            </div>
-          </>
-        )}
-
-        {step === 'confirmation' ? (
-          <div className="confirmation">
-            <p>✅ Success! You've subscribed to {influencerName}</p>
-            <p>KSh {amount} will be deducted {frequency}.</p>
+      {step === 'pin' && (
+        <form onSubmit={handleSubmit} className="subscription-form">
+          <div className="form-group">
+            <label>USSD PIN</label>
+            <input
+              type="password"
+              value={pin}
+              onChange={(e) => setPin(e.target.value)}
+              maxLength={4}
+              required
+            />
           </div>
-        ) : (
-          <button type="submit">
-            {step === 'phone' ? 'Continue' : 'Confirm Subscription'}
-          </button>
-        )}
-      </form>
+          <div className="form-group">
+            <label>Amount (KSh)</label>
+            <input
+              type="number"
+              value={amount}
+              onChange={(e) => setAmount(Number(e.target.value))}
+              min="10"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Frequency</label>
+            <select
+              value={frequency}
+              onChange={(e) => setFrequency(e.target.value as 'daily' | 'weekly' | 'monthly')}
+            >
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </div>
+          <button type="submit">Confirm</button>
+        </form>
+      )}
+
+      {step === 'confirmation' && (
+        <div className="confirmation">
+          <p>✅ Subscribed!</p>
+          <p>{amount} KSh {frequency}</p>
+        </div>
+      )}
     </div>
   );
 };

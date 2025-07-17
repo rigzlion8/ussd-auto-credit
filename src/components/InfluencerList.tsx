@@ -24,6 +24,8 @@ export const InfluencerList = () => {
               <SubscribeForm 
                 influencerId={influencer.id} 
                 influencerName={influencer.name} 
+                influencerPhone={influencer.phone}
+                influencerBalance={influencer.balance}
               />
             </li>
           ))}

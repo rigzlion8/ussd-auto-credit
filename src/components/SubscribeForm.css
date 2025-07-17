@@ -1,0 +1,64 @@
+.influencer-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 15px 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+.influencer-info {
+  margin-bottom: 15px;
+}
+
+.influencer-info h3 {
+  margin: 0 0 5px 0;
+  color: #2c3e50;
+}
+
+.subscription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+.confirmation {
+  text-align: center;
+  padding: 10px;
+  color: #27ae60;
+}
