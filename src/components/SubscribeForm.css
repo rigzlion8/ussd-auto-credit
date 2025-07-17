@@ -1,20 +1,28 @@
 .influencer-card {
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 20px;
-  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin: 20px auto;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .influencer-info {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .influencer-info h3 {
-  margin: 0 0 5px 0;
+  margin: 0 0 8px 0;
+  font-size: 1.3rem;
   color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.influencer-info p {
+  color: #7f8c8d;
+  margin: 5px 0;
 }
 
 .subscription-form {

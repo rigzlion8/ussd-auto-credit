@@ -108,11 +108,3 @@
   margin: 0 auto;
 }
 
-/* Influencer list container */
-.influencer-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin-top: 30px;
-}

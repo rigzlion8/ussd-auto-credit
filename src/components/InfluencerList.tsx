@@ -14,20 +14,13 @@ export const InfluencerList = () => {
         <p>No influencers found</p>
       ) : (
         <ul>
-          {influencers.map((influencer) => (
-            <li key={influencer.id} className="influencer-card">
-              <div className="influencer-info">
-                <h3>{influencer.name}</h3>
-                <p>Phone: {influencer.phone}</p>
-                <p>Balance: KSh {influencer.balance}</p>
-              </div>
+          {influencers.map((influencer) => (                    
               <SubscribeForm 
                 influencerId={influencer.id} 
                 influencerName={influencer.name} 
                 influencerPhone={influencer.phone}
                 influencerBalance={influencer.balance}
-              />
-            </li>
+              />            
           ))}
         </ul>
       )}
