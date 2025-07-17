@@ -1,0 +1,29 @@
+{
+  "influencers": [
+    {
+      "id": 1,
+      "phone": "254712345678",
+      "name": "Jane Doe",
+      "ussd_pin": "1234",
+      "balance": 500
+    }
+  ],
+  "subscribers": [
+    {
+      "id": 1,
+      "fan_phone": "254700000001",
+      "influencer_id": 1,
+      "amount": 10,
+      "frequency": "weekly",
+      "is_active": true
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "phone": "254700000001",
+      "pin": "4321",
+      "balance": 1000
+    }
+  ]
+}
