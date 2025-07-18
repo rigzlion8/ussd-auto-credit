@@ -64,7 +64,7 @@ export const SubscribeForm = ({
   return (
     <div className="influencer-card">
       <div className="influencer-info">
-        <h3>{influencerName}</h3>
+        <h3>Pay to {influencerName}</h3>
         <p>Phone: {influencerPhone}</p>
         <p>Balance: KSh {influencerBalance}</p>
       </div>
