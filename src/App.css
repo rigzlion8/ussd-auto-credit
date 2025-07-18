@@ -693,3 +693,83 @@ body, .theme-light {
 .pay-btn:hover {
   background: #219150;
 }
+
+.admin-dashboard-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.08);
+  padding: 32px 24px;
+}
+.admin-summary {
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 28px;
+}
+.admin-table th, .admin-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+.admin-table th {
+  background: #f4f6fa;
+  color: #2c3e50;
+}
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+.admin-table button {
+  margin-right: 6px;
+  padding: 5px 12px;
+  border-radius: 4px;
+  border: none;
+  font-size: 0.97rem;
+  cursor: pointer;
+  background: #3498db;
+  color: #fff;
+  transition: background 0.2s;
+}
+.admin-table button:last-child {
+  margin-right: 0;
+}
+.admin-table button:hover {
+  background: #217dbb;
+}
+.admin-list {
+  list-style: disc inside;
+  margin-bottom: 28px;
+  color: #2c3e50;
+}
+
+/* Dark theme for admin dashboard */
+.theme-dark .admin-dashboard-container {
+  background: #23272f;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.18);
+}
+.theme-dark .admin-summary {
+  color: #fff;
+}
+.theme-dark .admin-table th {
+  background: #23272f;
+  color: #fff;
+}
+.theme-dark .admin-table td {
+  color: #eee;
+}
+.theme-dark .admin-list {
+  color: #eee;
+}
+.theme-dark .admin-table button {
+  background: #6ec1e4;
+  color: #23272f;
+}
+.theme-dark .admin-table button:hover {
+  background: #3498db;
+  color: #fff;
+}

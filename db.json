@@ -17,7 +17,7 @@
     },
     {
       "id": 3,
-      "phone": "254740389555",
+      "phone": "254722345678",
       "name": "John Wick",
       "ussd_shortcode": "0000",
       "imageUrl": "/images/john_wick.jpg",
@@ -27,14 +27,13 @@
       "id": 4,
       "phone": "254712345000",
       "name": "Martha Musembi",
-      "imageUrl": "/images/martha_musembi.jpg",
       "ussd_shortcode": "1234",
       "received": 50050
     },
     {
       "id": 5,
       "phone": "254722345001",
-      "name": "Nicholas Kyalo",
+      "name": "Wambui Doe",
       "ussd_shortcode": "1234",
       "received": 450000
     },
@@ -93,38 +92,6 @@
       "influencer_id": 6,
       "amount": 10000,
       "frequency": "monthly",
-      "is_active": true
-    },
-    {
-      "id": "067c",
-      "fan_phone": "254710000001",
-      "influencer_id": 3,
-      "amount": 10,
-      "frequency": "weekly",
-      "is_active": true
-    },
-    {
-      "id": "793a",
-      "fan_phone": "254710000001",
-      "influencer_id": 3,
-      "amount": 10,
-      "frequency": "weekly",
-      "is_active": true
-    },
-    {
-      "id": "7def",
-      "fan_phone": "254710000001",
-      "influencer_id": 3,
-      "amount": 10,
-      "frequency": "weekly",
-      "is_active": true
-    },
-    {
-      "id": "3313",
-      "fan_phone": "254710000001",
-      "influencer_id": 2,
-      "amount": 10,
-      "frequency": "weekly",
       "is_active": true
     }
   ],
