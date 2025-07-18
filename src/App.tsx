@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { InfluencerList } from './components/InfluencerList';
 import { InfluencerDashboard } from './pages/InfluencerDashboard';
+import { SubscriberDashboard } from './pages/SubscriberDashboard';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
@@ -31,6 +32,7 @@ const App = () => {
             <a href="#" className="nav-link">Features</a>
             <a href="#" className="nav-link">Pricing</a>
             <a href="#" className="nav-link">Contact</a>
+            <Link to="/subscriber" className="nav-link">Subscriber Dashboard</Link>
             {isAdmin && (
               <Link to="/dashboard" className="nav-link">Influencer Dashboard</Link>
             )}
@@ -57,6 +59,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<InfluencerList />} />
             <Route path="/dashboard" element={<InfluencerDashboard />} />
+            <Route path="/subscriber" element={<SubscriberDashboard />} />
           </Routes>
         </main>
 

@@ -502,3 +502,194 @@ body, .theme-light {
   border-color: #6ec1e4;
   box-shadow: 0 0 0 2px rgba(110, 193, 228, 0.12);
 }
+
+.subscriber-dashboard-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.08);
+  padding: 32px 24px;
+}
+.subscriber-profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.subscriber-profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #3498db;
+}
+.subscriber-profile-details h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+.subscriber-profile-details p {
+  margin: 0;
+  color: #555;
+}
+.subscriber-actions {
+  margin-bottom: 24px;
+  text-align: right;
+}
+.pay-another-btn {
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.pay-another-btn:hover {
+  background: #219150;
+}
+.subscription-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+.subscription-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+.subscription-influencer-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #3498db;
+}
+.subscription-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.influencer-name {
+  font-weight: 600;
+  color: #2c3e50;
+}
+.subscription-amount {
+  color: #555;
+  font-size: 0.98rem;
+}
+.subscription-status {
+  font-size: 0.95rem;
+  color: #888;
+}
+.subscription-lastpaid {
+  font-size: 0.92rem;
+  color: #888;
+}
+.subscription-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cancel-btn, .renew-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.renew-btn {
+  background: #3498db;
+}
+.cancel-btn:hover {
+  background: #c0392b;
+}
+.renew-btn:hover {
+  background: #217dbb;
+}
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+.transaction-table th, .transaction-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+.transaction-table th {
+  background: #f4f6fa;
+  color: #2c3e50;
+}
+.transaction-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Dark theme for subscriber dashboard */
+.theme-dark .subscriber-dashboard-container {
+  background: #23272f;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.18);
+}
+.theme-dark .subscriber-profile-details h2 {
+  color: #fff;
+}
+.theme-dark .subscriber-profile-details p {
+  color: #bbb;
+}
+.theme-dark .subscription-item {
+  background: #2c3e50;
+}
+.theme-dark .influencer-name {
+  color: #fff;
+}
+.theme-dark .subscription-amount,
+.theme-dark .subscription-status,
+.theme-dark .subscription-lastpaid {
+  color: #aaa;
+}
+.theme-dark .cancel-btn {
+  background: #e74c3c;
+}
+.theme-dark .cancel-btn:hover {
+  background: #c0392b;
+}
+.theme-dark .renew-btn {
+  background: #3498db;
+}
+.theme-dark .renew-btn:hover {
+  background: #217dbb;
+}
+.theme-dark .transaction-table th {
+  background: #23272f;
+  color: #fff;
+}
+.theme-dark .transaction-table td {
+  color: #eee;
+}
+
+.pay-btn {
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 5px;
+  font-size: 0.98rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  min-width: 60px;
+}
+.pay-btn:hover {
+  background: #219150;
+}
