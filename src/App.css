@@ -108,3 +108,85 @@
   margin: 0 auto;
 }
 
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo {
+  height: 40px;
+  width: auto;
+}
+
+.platform-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #34495e;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #3498db;
+}
+
+.navbar-auth {
+  display: flex;
+  gap: 15px;
+}
+
+.auth-link {
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link {
+  color: #3498db;
+  border: 1px solid #3498db;
+}
+
+.login-link:hover {
+  background-color: #f0f8ff;
+}
+
+.signup-link {
+  background-color: #3498db;
+  color: white;
+  border: 1px solid #3498db;
+}
+
+.signup-link:hover {
+  background-color: #2980b9;
+}
+
+/* Existing App Styles (keep these) */
+.App {
+  text-align: center;
+}
+
+.main-content {
+  padding: 2rem;
+}
