@@ -17,7 +17,7 @@
     },
     {
       "id": 3,
-      "phone": "254722345678",
+      "phone": "254740389555",
       "name": "John Wick",
       "ussd_shortcode": "0000",
       "imageUrl": "/images/john_wick.jpg",
@@ -93,6 +93,38 @@
       "influencer_id": 6,
       "amount": 10000,
       "frequency": "monthly",
+      "is_active": true
+    },
+    {
+      "id": "067c",
+      "fan_phone": "254710000001",
+      "influencer_id": 3,
+      "amount": 10,
+      "frequency": "weekly",
+      "is_active": true
+    },
+    {
+      "id": "793a",
+      "fan_phone": "254710000001",
+      "influencer_id": 3,
+      "amount": 10,
+      "frequency": "weekly",
+      "is_active": true
+    },
+    {
+      "id": "7def",
+      "fan_phone": "254710000001",
+      "influencer_id": 3,
+      "amount": 10,
+      "frequency": "weekly",
+      "is_active": true
+    },
+    {
+      "id": "3313",
+      "fan_phone": "254710000001",
+      "influencer_id": 2,
+      "amount": 10,
+      "frequency": "weekly",
       "is_active": true
     }
   ],

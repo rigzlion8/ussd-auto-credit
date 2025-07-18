@@ -20,7 +20,7 @@ export const SubscribeForm = ({
   const [phone, setPhone] = useState('');
   const [pin, setPin] = useState('');
   const [amount, setAmount] = useState(10);
-  const [frequency, setFrequency] = useState<'daily' | 'weekly' | 'monthly'>('weekly');
+  const [frequency, setFrequency] = useState<'daily' | 'weekly' | 'monthly' | 'yearly' | 'none'>('none');
   const [step, setStep] = useState<'phone' | 'pin' | 'confirmation'>('phone');
 
   const verifyPin = async () => {
@@ -132,11 +132,13 @@ export const SubscribeForm = ({
                 <label>Frequency</label>
                 <select
                   value={frequency}
-                  onChange={(e) => setFrequency(e.target.value as 'daily' | 'weekly' | 'monthly')}
+                  onChange={(e) => setFrequency(e.target.value as 'daily' | 'weekly' | 'monthly' | 'yearly' | 'none')}
                 >
                   <option value="daily">Daily</option>
                   <option value="weekly">Weekly</option>
                   <option value="monthly">Monthly</option>
+                  <option value="yearly">Yearly</option>
+                  <option value="none">None</option>
                 </select>
               </div>
               <button type="submit">Confirm</button>
@@ -145,7 +147,7 @@ export const SubscribeForm = ({
 
           {step === 'confirmation' && (
             <div className="confirmation">
-              <p>✅ Subscribed!</p>
+              <p>✅ Wait for M-PESA PIN!</p>
               <p>{amount} KSh {frequency}</p>
             </div>
           )}

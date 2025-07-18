@@ -140,6 +140,24 @@
   gap: 20px;
 }
 
+.navbar-links-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar-auth-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-auth {
+  display: flex;
+  gap: 15px;
+}
+
 .nav-link {
   text-decoration: none;
   color: #34495e;
@@ -151,9 +169,25 @@
   color: #3498db;
 }
 
-.navbar-auth {
+.navbar-search {
+  margin: 0;
   display: flex;
-  gap: 15px;
+  align-items: center;
+}
+
+.search-input {
+  width: 220px;
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.12);
 }
 
 .auth-link {
@@ -332,4 +366,139 @@ body, .theme-light {
 .theme-dark, .theme-dark body {
   background: #181c23 !important;
   color: #e0e6ed !important;
+}
+
+/* Influencer Dashboard Styles */
+.dashboard-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.08);
+  padding: 32px 24px;
+}
+.dashboard-profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.dashboard-profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #3498db;
+}
+.dashboard-profile-details h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+.dashboard-profile-details p {
+  margin: 0;
+  color: #555;
+}
+.dashboard-metrics {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+.dashboard-metric {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 18px 20px;
+  flex: 1;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(52, 152, 219, 0.04);
+}
+.metric-label {
+  display: block;
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 6px;
+}
+.metric-value {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #3498db;
+}
+.dashboard-selector {
+  margin-top: 18px;
+  text-align: right;
+}
+.dashboard-selector label {
+  margin-right: 8px;
+  color: #34495e;
+  font-weight: 500;
+}
+.dashboard-selector select {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Dark theme for dashboard */
+.theme-dark .dashboard-container {
+  background: #23272f;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.18);
+}
+.theme-dark .dashboard-profile-details h2 {
+  color: #fff;
+}
+.theme-dark .dashboard-profile-details p {
+  color: #bbb;
+}
+.theme-dark .dashboard-metric {
+  background: #2c3e50;
+  box-shadow: 0 2px 6px rgba(52, 152, 219, 0.08);
+}
+.theme-dark .metric-label {
+  color: #aaa;
+}
+.theme-dark .metric-value {
+  color: #6ec1e4;
+}
+.theme-dark .dashboard-selector label {
+  color: #eee;
+}
+.theme-dark .dashboard-selector select {
+  background: #23272f;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.navbar-search {
+  margin: 0 20px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 220px;
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.12);
+}
+
+.theme-dark .search-input {
+  background: #23272f;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.theme-dark .search-input:focus {
+  border-color: #6ec1e4;
+  box-shadow: 0 0 0 2px rgba(110, 193, 228, 0.12);
 }
