@@ -6,6 +6,7 @@ interface Influencer {
   name: string;
   phone: string;
   received: number;
+  imageUrl?: string;
 }
 
 export const useInfluencers = () => {
@@ -14,18 +15,25 @@ export const useInfluencers = () => {
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
+    let isMounted = true;
     const fetchInfluencers = async () => {
       try {
         const response = await axios.get('http://localhost:3001/influencers');
-        setInfluencers(response.data);
+        if (isMounted) setInfluencers(response.data);
       } catch (err) {
-        setError(err as Error);
+        if (isMounted) setError(err as Error);
       } finally {
-        setIsLoading(false);
+        if (isMounted) setIsLoading(false);
       }
     };
 
     fetchInfluencers();
+    const interval = setInterval(fetchInfluencers, 5000); // Poll every 5 seconds
+
+    return () => {
+      isMounted = false;
+      clearInterval(interval);
+    };
   }, []);
 
   return { influencers, isLoading, error };
