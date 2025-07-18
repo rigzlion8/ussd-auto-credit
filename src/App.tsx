@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { InfluencerList } from './components/InfluencerList';
 import './App.css';
 
 const App = () => {
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
+
   return (
-    <div className="App">
+    <div className={`App theme-${theme}`}>
       <nav className="navbar">
         <div className="navbar-brand">
           <img 
@@ -31,6 +37,13 @@ const App = () => {
       <main className="main-content">
         <InfluencerList />
       </main>
+
+      <footer className="footer">
+        <button onClick={toggleTheme} className="theme-toggle-btn small">
+          {theme === 'light' ? '🌙' : '☀️'}
+        </button>
+        <span className="footer-text">&copy; {new Date().getFullYear()} USSD AutoPay. All rights reserved.</span>
+      </footer>
     </div>
   );
 };
