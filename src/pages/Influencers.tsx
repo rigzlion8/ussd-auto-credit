@@ -9,7 +9,7 @@ export const InfluencersPage = () => {
       <ul>
         {influencers.map((influencer) => (
           <li key={influencer.id}>
-            {influencer.name} - Balance: KSh {influencer.balance}
+            {influencer.name} - Balance: KSh {influencer.received}
           </li>
         ))}
       </ul>

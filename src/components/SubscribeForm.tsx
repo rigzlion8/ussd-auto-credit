@@ -6,14 +6,14 @@ interface SubscribeFormProps {
   influencerId: number;
   influencerName: string;
   influencerPhone: string;
-  influencerBalance: number;
+  influencerReceived: number;
 }
 
 export const SubscribeForm = ({ 
   influencerId, 
   influencerName,
   influencerPhone,
-  influencerBalance
+  influencerReceived
 }: SubscribeFormProps) => {
   const [phone, setPhone] = useState('');
   const [pin, setPin] = useState('');
@@ -66,7 +66,7 @@ export const SubscribeForm = ({
       <div className="influencer-info">
         <h3>Pay to {influencerName}</h3>
         <p>Phone: {influencerPhone}</p>
-        <p>Balance: KSh {influencerBalance}</p>
+        <p>Total Received: KSh {influencerReceived}</p>
       </div>
 
       {step === 'phone' && (

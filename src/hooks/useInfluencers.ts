@@ -5,7 +5,7 @@ interface Influencer {
   id: number;
   name: string;
   phone: string;
-  balance: number;
+  received: number;
 }
 
 export const useInfluencers = () => {

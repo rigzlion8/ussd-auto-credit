@@ -6,21 +6,21 @@
       "name": "Jane Doe",
       "imageUrl": "/images/jane_doe.jpg",
       "ussd_shortcode": "1234",
-      "balance": 500
+      "received": 500
     },
     {
       "id": 2,
       "phone": "254722345678",
       "name": "Wambui Doe",
       "ussd_shortcode": "1234",
-      "balance": 450000
+      "received": 450000
     },
     {
       "id": 3,
       "phone": "254722345678",
       "name": "John Wick",
       "ussd_shortcode": "0000",
-      "balance": 2350000
+      "received": 2350000
     }
   ],
   "subscribers": [

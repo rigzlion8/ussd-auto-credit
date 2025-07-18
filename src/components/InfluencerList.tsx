@@ -5,7 +5,7 @@ interface Influencer {
   id: number;
   name: string;
   phone: string;
-  balance: number;
+  received: number;
   imageUrl?: string; // Make imageUrl optional
 }
 
@@ -51,7 +51,7 @@ export const InfluencerList = () => {
                 influencerId={influencer.id} 
                 influencerName={influencer.name} 
                 influencerPhone={influencer.phone}
-                influencerBalance={influencer.balance}
+                influencerReceived={influencer.received}
               />
             </li>
           ))}
