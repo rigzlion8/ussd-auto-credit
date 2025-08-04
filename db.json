@@ -93,6 +93,14 @@
       "amount": 10000,
       "frequency": "monthly",
       "is_active": true
+    },
+    {
+      "id": "dbad",
+      "fan_phone": "254710000001",
+      "influencer_id": 3,
+      "amount": 10,
+      "frequency": "none",
+      "is_active": true
     }
   ],
   "users": [
